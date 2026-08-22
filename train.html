@@ -1,4 +1,340 @@
-<h1>
-  train.html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Train Search | RailWayGo</title>
+
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<style>
+
+@keyframes appear {
+
+from {
+opacity:0;
+transform:translateY(25px);
+}
+
+to {
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+.card {
+animation:appear .7s ease;
+}
+
+</style>
+
+</head>
+
+
+<body class="bg-slate-950 text-white">
+
+
+<nav class="fixed top-0 w-full z-50 bg-slate-950/90 backdrop-blur-xl border-b border-white/10">
+
+<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+<a href="index.html" class="text-2xl font-black">
+🚆 <span class="text-red-500">RailWay</span>Go
+</a>
+
+<div class="hidden md:flex gap-8 font-semibold">
+
+<a href="index.html" class="hover:text-red-400">
+Home
+</a>
+
+<a href="booking.html" class="hover:text-red-400">
+Booking
+</a>
+
+<a href="train.html" class="text-red-400">
+Trains
+</a>
+
+<a href="passenger.html" class="hover:text-red-400">
+Passenger
+</a>
+
+<a href="about.html" class="hover:text-red-400">
+About
+</a>
+
+</div>
+
+</div>
+
+</nav>
+
+
+<section class="pt-32 pb-20">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<div class="text-center mb-12">
+
+<p class="text-red-500 font-bold">
+TRAIN SEARCH
+</p>
+
+<h1 class="text-5xl font-black">
+Find Your Train
 </h1>
-<a href="train.html"> train </a>
+
+</div>
+
+
+<!-- SEARCH -->
+
+<div class="bg-slate-900 rounded-3xl p-6 border border-white/10 mb-12">
+
+<div class="grid md:grid-cols-4 gap-4">
+
+<input
+type="text"
+placeholder="From"
+class="bg-slate-800 rounded-xl px-5 py-4 outline-none focus:ring-2 ring-red-500">
+
+<input
+type="text"
+placeholder="To"
+class="bg-slate-800 rounded-xl px-5 py-4 outline-none focus:ring-2 ring-red-500">
+
+<input
+type="date"
+class="bg-slate-800 rounded-xl px-5 py-4 outline-none">
+
+<button
+onclick="alert('Searching trains...')"
+class="bg-red-600 hover:bg-red-700 rounded-xl font-bold transition">
+
+Search Trains
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- TRAIN CARDS -->
+
+<div class="grid md:grid-cols-3 gap-6">
+
+
+<div class="card bg-slate-900 border border-white/10 rounded-3xl p-7 hover:border-red-500 transition">
+
+<div class="flex justify-between">
+
+<div>
+
+<p class="text-red-400 font-bold">
+12951
+</p>
+
+<h2 class="text-2xl font-bold">
+Mumbai Rajdhani
+</h2>
+
+</div>
+
+<span class="bg-green-500/10 text-green-400 px-3 py-1 rounded-full text-sm">
+Available
+</span>
+
+</div>
+
+<div class="flex justify-between items-center my-8">
+
+<div>
+
+<p class="text-3xl font-black">
+17:00
+</p>
+
+<p class="text-slate-500">
+Mumbai
+</p>
+
+</div>
+
+<div class="text-red-500">
+━━━━━━━━ 🚆 ━━━━━━━
+</div>
+
+<div>
+
+<p class="text-3xl font-black">
+08:35
+</p>
+
+<p class="text-slate-500">
+Delhi
+</p>
+
+</div>
+
+</div>
+
+<a href="booking.html"
+class="block text-center bg-red-600 py-3 rounded-xl font-bold hover:bg-red-700">
+
+Book Now
+
+</a>
+
+</div>
+
+
+<div class="card bg-slate-900 border border-white/10 rounded-3xl p-7 hover:border-red-500 transition">
+
+<div class="flex justify-between">
+
+<div>
+
+<p class="text-red-400 font-bold">
+12127
+</p>
+
+<h2 class="text-2xl font-bold">
+Intercity Express
+</h2>
+
+</div>
+
+<span class="bg-green-500/10 text-green-400 px-3 py-1 rounded-full text-sm">
+Available
+</span>
+
+</div>
+
+<div class="flex justify-between items-center my-8">
+
+<div>
+
+<p class="text-3xl font-black">
+06:40
+</p>
+
+<p class="text-slate-500">
+Mumbai
+</p>
+
+</div>
+
+<div class="text-red-500">
+━━━━ 🚆 ━━━━
+</div>
+
+<div>
+
+<p class="text-3xl font-black">
+10:55
+</p>
+
+<p class="text-slate-500">
+Pune
+</p>
+
+</div>
+
+</div>
+
+<a href="booking.html"
+class="block text-center bg-red-600 py-3 rounded-xl font-bold">
+
+Book Now
+
+</a>
+
+</div>
+
+
+<div class="card bg-slate-900 border border-white/10 rounded-3xl p-7 hover:border-red-500 transition">
+
+<div class="flex justify-between">
+
+<div>
+
+<p class="text-red-400 font-bold">
+12009
+</p>
+
+<h2 class="text-2xl font-bold">
+Shatabdi Express
+</h2>
+
+</div>
+
+<span class="bg-yellow-500/10 text-yellow-400 px-3 py-1 rounded-full text-sm">
+Limited
+
+</span>
+
+</div>
+
+<div class="flex justify-between items-center my-8">
+
+<div>
+
+<p class="text-3xl font-black">
+06:00
+</p>
+
+<p class="text-slate-500">
+Mumbai
+</p>
+
+</div>
+
+<div class="text-red-500">
+━━━━ 🚆 ━━━━
+</div>
+
+<div>
+
+<p class="text-3xl font-black">
+12:25
+</p>
+
+<p class="text-slate-500">
+Ahmedabad
+</p>
+
+</div>
+
+</div>
+
+<a href="booking.html"
+class="block text-center bg-red-600 py-3 rounded-xl font-bold">
+
+Book Now
+
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer class="border-t border-white/10 py-8 text-center text-slate-500">
+
+© 2026 RailWayGo • Railway Reservation System
+
+</footer>
+
+</body>
+  </html>
